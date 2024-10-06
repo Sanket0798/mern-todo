@@ -8,7 +8,8 @@ const Create = () => {
     axios
       .post("http://localhost:8800/add", { task: task })
       .then((result) => {
-        console.log("Task added:", result.data);
+        // console.log("Task added:", result.data);
+        location.reload()
       })
       .catch((err) => {
         console.log("Error adding task:", err);
