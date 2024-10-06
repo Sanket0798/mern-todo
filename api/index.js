@@ -19,6 +19,12 @@ mongoose
   .then(() => console.log("Connected to MongoDB"))
   .catch(() => console.log("Error connecting Database"));
 
+app.get("/get", (req, res) => {
+  TodoModel.find()
+    .then((result) => res.json(result))
+    .catch((err) => res.json(err));
+});
+
 app.post("/add", async (req, res) => {
   try {
     const task = req.body.task;
