@@ -21,7 +21,7 @@ const Create = () => {
         type="text"
         name=""
         id=""
-        className="border border-black rounded-full font-semibold"
+        className="border border-black rounded-full"
         onChange={(e) => setTask(e.target.value)}
       />
       <button type="button" onClick={handleAdd}>
