@@ -3,21 +3,15 @@ import axios from "axios";
 
 const Create = () => {
   const [task, setTask] = useState();
-  // const handleAdd = () => {
-  //   axios
-  //     .post("http://localhost:8800/add", { task: task })
-  //     .then((result) => console.log(result))
-  //     .catch((err) => console.log(err));
-  // };
 
   const handleAdd = () => {
     axios
       .post("http://localhost:8800/add", { task: task })
       .then((result) => {
-        console.log("Task added:", result.data); // Handle success
+        console.log("Task added:", result.data);
       })
       .catch((err) => {
-        console.log("Error adding task:", err); // Handle error
+        console.log("Error adding task:", err);
       });
   };
 
